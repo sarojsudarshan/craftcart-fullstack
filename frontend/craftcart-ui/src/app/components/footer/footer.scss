@@ -1,0 +1,26 @@
+.footer {
+    color: #4b3428;
+    padding: 30px 60px 20px;
+    text-align: center;
+    background-color: burlywood;
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin: 20px 0;
+
+        a {
+            color: #4b3428;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

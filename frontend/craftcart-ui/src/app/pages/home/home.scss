@@ -1,0 +1,40 @@
+.home {
+    min-height: calc(100vh - 200px);
+    background-color: #e8d2bc;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+
+    // text-align: center;
+
+    h1 {
+        color: #412719;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #2d150a;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 12px 28px;
+        border: none;
+        border-radius: 6px;
+
+        background-color: #8b6a55;
+        color: white;
+        font-size: 16px;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: #6f503e;
+        }
+    }
+
+}
