@@ -1,0 +1,115 @@
+.shop {
+    min-height: calc(100vh - 200px);
+    padding: 50px 60px;
+    background-color: #e8d2bc;
+
+    .shop-header {
+        text-align: center;
+        margin-bottom: 40px;
+
+        h1 {
+            color: #412719;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #211611;
+            font-size: 17px;
+        }
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1200px;
+        margin: auto;
+
+        .product-card {
+            background-color: #fffaf6;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(65, 39, 25, 0.12);
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+        .product-image {
+            height: 250px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .product-info {
+            padding: 10px;
+
+            h3 {
+                color: #412719;
+                font-size: 18px;
+                margin: 8px 0;
+            }
+
+            .description {
+                color: #2e211b;
+                font-size: 16px;
+                line-height: 1.5;
+            }
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+
+            .price {
+                color: #412719;
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            button {
+                border: none;
+                border-radius: 6px;
+                padding: 10px 15px;
+                background-color: #8b6a55;
+                color: white;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #604536;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 900px) {
+  .shop {
+    padding: 40px 30px;
+
+    .products {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .shop {
+    padding: 30px 20px;
+
+    .products {
+      grid-template-columns: 1fr;
+    }
+  }
+}

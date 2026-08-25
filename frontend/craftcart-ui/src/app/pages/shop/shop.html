@@ -1,1 +1,40 @@
-<p>shop works!</p>
+<section class="shop">
+    <div class="shop-header">
+        <h1>Our Crochet Collection</h1>
+
+        <p>
+            Handmade creations crafted with love, just for you.
+        </p>
+    </div>
+
+    <div class="products">
+        <!-- <span class="category">Keychains</span> -->
+        @for(product of products; track product.id){
+        <div class="product-card">
+            <div class="product-image">
+                <img />
+            </div>
+            <div class="product-info">
+
+                <h3>{{ product.name }}</h3>
+
+                <p class="description">
+                    {{ product.description }}
+                </p>
+
+                <div class="product-footer">
+
+                    <span class="price">
+                        ₹{{ product.price }}
+                    </span>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</section>
