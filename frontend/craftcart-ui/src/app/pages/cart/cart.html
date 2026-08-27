@@ -1,1 +1,43 @@
-<p>cart works!</p>
+<section class="cart">
+    <h2>My Cart</h2>
+
+    @if(cartItems.length === 0 ){
+    <p>Cart is empty.</p>
+    } @else{
+    <div class="cart-items">
+        @for(item of cartItems; track item.product.id){
+        <div class="item">
+            <img>
+
+            <div class="item-details">
+                <h3>{{item.product.name}}</h3>
+                <p>{{item.product.price}}</p>
+            </div>
+
+            <div class="quantity-control">
+                <button (click)="decreaseQuantity(item.product.id)">
+                    -
+                </button>
+                <span class="count">
+                    {{item.quantity}}
+                </span>
+                <button (click)="increaseQuantity(item.product.id)">
+                    +
+                </button>
+            </div>
+
+            <button (click)="remove(item.product.id)">Remove</button>
+        </div>
+        }
+    </div>
+
+    <div>
+        <h3>Total: {{total}}</h3>
+
+        <button>
+            Proceed to Checkout
+        </button>
+    </div>
+    }
+
+</section>

@@ -28,9 +28,23 @@
                         ₹{{ product.price }}
                     </span>
 
-                    <button>
+                    @if(getQuantity(product.id) === 0){
+                        <button (click)="addToCart(product)">
                         Add to Cart
                     </button>
+                    } @else{
+                        <div class="quantity-control">
+                            <button (click)="decreaseQuantity(product.id)">
+                                -
+                            </button>
+                            <span class="count">
+                                {{ getQuantity(product.id) }}
+                            </span>
+                            <button (click)="increaseQuantity(product.id)">
+                                +
+                            </button>
+                        </div>
+                    }
 
                 </div>
             </div>

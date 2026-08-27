@@ -89,27 +89,40 @@
                     background-color: #604536;
                 }
             }
+
+            .quantity-control {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .count {
+                    min-width: 20px;
+                    text-align: center;
+                    color: #412719;
+                    font-weight: 600;
+                }
+            }
         }
     }
 
 }
 
 @media (max-width: 900px) {
-  .shop {
-    padding: 40px 30px;
+    .shop {
+        padding: 40px 30px;
 
-    .products {
-      grid-template-columns: repeat(2, 1fr);
+        .products {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
-  }
 }
 
 @media (max-width: 600px) {
-  .shop {
-    padding: 30px 20px;
+    .shop {
+        padding: 30px 20px;
 
-    .products {
-      grid-template-columns: 1fr;
+        .products {
+            grid-template-columns: 1fr;
+        }
     }
-  }
 }

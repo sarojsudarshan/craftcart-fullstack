@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from '../../models/product.model';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-shop',
@@ -8,6 +9,8 @@ import { Product } from '../../models/product.model';
   styleUrl: './shop.scss',
 })
 export class ShopComponent {
+
+  constructor(private cartService: CartService){}
 
   products: Product[] = [
     {
@@ -51,4 +54,20 @@ export class ShopComponent {
       description: 'Beautiful handmade crochet keychain.'
     }
   ];
+
+  addToCart(product: Product): void{
+    this.cartService.addToCart(product);
+  }
+
+  increaseQuantity(productId: number): void{
+    this.cartService.increaseQuantity(productId);
+  }
+
+  decreaseQuantity(productId: number): void{
+    this.cartService.decreaseQuantity(productId);
+  }
+
+  getQuantity(productId: number): number{
+    return this.cartService.getQuantity(productId);
+  }
 }
