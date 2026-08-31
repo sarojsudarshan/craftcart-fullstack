@@ -3,6 +3,11 @@
 
     @if(cartItems.length === 0 ){
     <p>Cart is empty.</p>
+
+    <a routerLink="/shop">
+        Continue Shopping
+    </a>
+
     } @else{
     <div class="cart-items">
         @for(item of cartItems; track item.product.id){
@@ -26,15 +31,15 @@
                 </button>
             </div>
 
-            <button (click)="remove(item.product.id)">Remove</button>
+            <button class="remove-btn" (click)="remove(item.product.id)">Remove</button>
         </div>
         }
     </div>
 
     <div>
-        <h3>Total: {{total}}</h3>
+        <h3 style="color: #412719;">Total: {{total}}</h3>
 
-        <button>
+        <button class="checkout-btn">
             Proceed to Checkout
         </button>
     </div>
