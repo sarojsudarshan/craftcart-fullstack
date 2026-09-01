@@ -5,6 +5,8 @@ import { ShopComponent } from './pages/shop/shop';
 import { OrdersComponent } from './pages/orders/orders';
 import { CartComponent } from './pages/cart/cart';
 import { ContactComponent } from './pages/contact/contact';
+import { CheckoutComponent } from './pages/checkout/checkout';
+import { OrderConfirmationComponent } from './pages/order-confirmation/order-confirmation';
 
 export const routes: Routes = [
     {
@@ -26,6 +28,14 @@ export const routes: Routes = [
     {
         path: 'contact',
         component: ContactComponent
+    },
+    {
+        path: 'checkout',
+        component: CheckoutComponent
+    },
+    {
+        path: 'order-confirmation',
+        component: OrderConfirmationComponent
     },
     {
         path: '**',
